@@ -14,12 +14,19 @@
     </div>
     </header>
     <div id="container" class="row">
+    <div id="ribbon-div">
     <div id="current-wrapper">
+    <div class="ribbon-wrap"></div>
       Current Neighborhood: <span id="current-n-name"></span> <a href="#" id="refresh-link">(refresh)</a>
     </div>
+    </div>
+    <div id="search-wrapper">
+    Bike from
     <input type="text" id="origin" placeholder="Starting Address"/>
+    to
     <input type="text" id="dest" placeholder="Ending Address"/>
     <input type="button" id="search" value="search" />
+    </div>
     <div id="results" class="cf">
       <div id="map"></div>
       <div id="neighborhoods-wrapper">
