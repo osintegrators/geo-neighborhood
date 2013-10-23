@@ -121,7 +121,7 @@ a {
   font-size: 1.2em;
   width: 100px;
   height: 34px;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
   border: 0;
   color: #600E15;
   background: #EDB506;
@@ -155,4 +155,8 @@ a {
 
 .hood {
   line-height: 1.5em;
+}
+
+h2 {
+  margin-top: 0;
 }
