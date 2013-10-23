@@ -7,6 +7,44 @@ a {
   color: #00B7FF;
 }
 
+#origin, #dest {
+  width: 250px;
+  font-size: 1.2em;
+  border: 1px solid #DDD;
+  padding: 5px;
+}
+#origin:focus, #dest:focus {
+  border: 1px solid #DDD;
+  outline: 2px solid #BBB;
+}
+
+#search {
+  font-size: 1.2em;
+  width: 100px;
+  height: 29px;
+  margin: 0;
+  border: 0;
+  color: #121213;
+  background: #FFCB47;
+}
+
 #map {
-  height: 400px
+  height: 400px;
+  width: 500px;
+}
+
+#results {
+  margin-top: 20px;
+}
+
+#results > div {
+  float: left;
+}
+
+#neighborhoods-wrapper {
+  padding:0 15px;
+}
+
+.hood {
+  line-height: 1.5em;
 }

@@ -7,7 +7,8 @@ $(function(){
     $('#current-wrapper').html('(We can\'t seem to get this device\'s location)');
   }
 
-  function refreshCurrent(){
+  function refreshCurrent(ev){
+    if(ev) ev.preventDefault();
     navigator.geolocation.getCurrentPosition(queryCurrentNeighborhood);
   }
 
@@ -47,13 +48,15 @@ $(function(){
     }
   }
 
+  var currentRoute;
   function redrawMap(route){
+    if(currentRoute) map.removeLayer(currentRoute);
     var Lroute = route.map(function(coords){
       return new L.LatLng(coords[1], coords[0]);
     });
 
-    var polyline = L.polyline(Lroute, {color: 'blue'}).addTo(map);
-    map.fitBounds(polyline.getBounds());
+    currentRoute = L.polyline(Lroute, {color: 'blue'}).addTo(map);
+    map.fitBounds(currentRoute.getBounds());
   }
 
 
