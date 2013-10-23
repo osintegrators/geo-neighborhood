@@ -8,18 +8,25 @@
     <![endif]-->
   </head>
   <body>
+    <header class="row">
+    <div id="logoWrapper">
+      <a href="http://osintegrators.com/" title="Home" rel="home" id="logo"></a>
+    </div>
+    </header>
+    <div id="container" class="row">
     <div id="current-wrapper">
       Current Neighborhood: <span id="current-n-name"></span> <a href="#" id="refresh-link">(refresh)</a>
     </div>
     <input type="text" id="origin" placeholder="Starting Address"/>
     <input type="text" id="dest" placeholder="Ending Address"/>
     <input type="button" id="search" value="search" />
-    <div id="results">
+    <div id="results" class="cf">
       <div id="map"></div>
       <div id="neighborhoods-wrapper">
       <h2>Neighborhoods passed</h2>
       <div id="neighborhoods"></div>
       </div>
+    </div>
     </div>
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
     <script type="text/javascript" src="javascripts/zepto.js"></script>
