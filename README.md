@@ -23,7 +23,7 @@ The resulting file is a single GeoJSON object of the `FeatureCollection` type, w
       "features": [ {a neighborhood as a GeoJSON feature},...],
     }
 
-I saved just the features array as a separate file, then imported it using `mongoimport`
+I saved just the `features` array as a separate file, then imported it into MongoDB using `mongoimport`
 
     mongoimport --db Chicago --collection neighborhoods --jsonArray neighborhoods-formatted.json
 
