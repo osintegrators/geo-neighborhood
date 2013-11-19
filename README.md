@@ -2,6 +2,8 @@
 
 A live version of this app can be found at: http://geo-neighborhood.cfapps.io
 
+*NOTE: The neighborhoods of Streeterville and Ohare don't exist in this app currently*
+
 ### The Data ###
 
 City of Chicago neighborhood boundaries were found here: [http://www.cityofchicago.org/city/en/depts/doit/dataset/boundaries_-_neighborhoods.html](http://www.cityofchicago.org/city/en/depts/doit/dataset/boundaries_-_neighborhoods.html)
