@@ -2,7 +2,10 @@
 
 A live version of this app can be found at: http://geo-neighborhood.cfapps.io
 
-*NOTE: The neighborhoods of Streeterville and Ohare don't exist in this app currently*
+*NOTE: The neighborhoods of Streeterville and Ohare don't exist in this app currently.
+The neighborhood data published by the City of Chicago defines these two neighborhoods as
+MultiPolygons, an unsupported GeoJSON type in MongoDB.  This could easily be worked around,
+but I haven't spent the time to fix up the data yet.*
 
 ### The Data ###
 
