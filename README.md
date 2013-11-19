@@ -2,10 +2,6 @@
 
 A live version of this app can be found at: http://geo-neighborhood.cfapps.io
 
-*NOTE: The neighborhoods of Streeterville and Ohare don't exist in this app currently.
-The neighborhood data published by the City of Chicago defines these two neighborhoods as
-MultiPolygons, an unsupported GeoJSON type in MongoDB.  This could easily be worked around,
-but I haven't spent the time to fix up the data yet.*
 
 ### The Data ###
 
@@ -31,6 +27,10 @@ The resulting file is a single GeoJSON object of the `FeatureCollection` type, w
 I saved just the `features` array as a separate file, then imported it into MongoDB using `mongoimport`
 
     mongoimport --db Chicago --collection neighborhoods --jsonArray neighborhoods-formatted.json
+
+*NOTE: The neighborhoods of Streeterville and O'Hare are defined as
+MultiPolygons, an unsupported GeoJSON type in MongoDB.  I converted these to separate
+documents, each with it's own single polygon.*
 
 While it's not required for `$geoIntersects`, adding a `2dsphere` index will boost query performance.  Open up the mongo shell and run the following command:
 
